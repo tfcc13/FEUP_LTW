@@ -42,10 +42,7 @@
 
     <section id="Comments">
         <h3>Leave a comment</h3>
-        <label for="id_name"> Name:</label>
-        <input type="text" name = "name" id="id_name">
 
-        <br>
         <label for="comment" class="required">Your comment</label>
         <br>
 
@@ -53,11 +50,15 @@
 
         </textarea>
 
-
+        <footer>
+            Author:<input type="name" bame="Author" value="name">
+            Date: <input type="date" name="date" value="2024-02-12">
+        </footer>
         <form>
             <button formaction="save.php" formmethod="post" type="submit">
                 Submit
             </button>
+            
         </form>
 
     </section>
