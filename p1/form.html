@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A form</title>
+</head>
+<body>
+    <form action="save.php" method="get">
+
+    <label for="id_name">Name:</label>
+    <input type="text" name="name" id="id_name" required="required" placeholder="Your name">
+
+    <br>
+    <br>
+    
+    
+    <label>Age:</label>
+    <br>
+
+    <input type="radio" name="age" value="age" checked="checked"> &lt;18 
+    <input type="radio" name="age" value="age" > 19-35
+    <input type="radio" name="age" value="age" > 36-48
+    <input type="radio" name="age" value="age" > &gt;49
+    
+    <br>
+    <br>
+    
+    <label for="id_professions">Profession:</label>
+    <input name="profession" list="professions" id="id_professions" value="Prime-Minister">
+    <datalist id="professions">
+        <option>Bookeeper</option>
+        <option selected>Prime-Minister</option>
+        <option>PIMP</option>
+        <option>Warlord</option>
+    </datalist>
+
+    <br>
+
+    <label for="id_country">Country</label>
+    <select id="id_country" name="country" required="required">
+        <option value="" disabled selected>Choose a country</option>   
+        <option value="portugal">Portugal</option>
+        <option value="brasil">Brasil</option>
+        <option value="espanha">Espanha</option>
+        <option value="frança">França</option>
+        <option value="italia">Itália</option>
+    </select>
+
+    <br>
+    <br>
+
+    <input type="submit" value="Submit">
+
+    </form>
+</body>
+</html>
