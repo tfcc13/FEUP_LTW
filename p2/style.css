@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Imperial+Script&family=Ruda:wght@400..900&display=swap');
+
+
+body header > h1 {
+    font-family: Imperial Script;
+    font-size: 6.2em;
+    font-weight: lighter;
+    text-align: center;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 700px;
+    background-color: #fff1dc ;
+
+}
+
+
+#card {
+    background-color: #ffc6c6;
+    padding: 1em;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-right-width: 10px ;
+    border-right-style: solid;
+    border-right-color: #ca8a8a;
+}
+
+
+
+
+body header > h2 {
+    font-family: Ruda;
+    text-align: right;
+
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: gray;
+}
+
+
+
+.description p {
+    font-family: Crimson Pro ;
+    line-height: 2em;
+}
+
+.ingredients {
+    font-family: Crimson Pro;
+    line-height: 2em;
+}
+
+.method {
+    font-family: Crimson Pro;
+    line-height: 2em;
+}
+
+.marked {
+    color: rgb(157, 184, 233);
+}
