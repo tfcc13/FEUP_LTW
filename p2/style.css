@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Poppins:400,700');
+
+body > header {
+    background-color: #046DD5;
+}
+
+#menu a {
+    text-decoration: none;
+    border-top: #8ABA56;
+    border-top-width: 2px;
+    border-top-style: solid;
+}
+
+
+body {
+    padding: 1em;
+    margin: 1em;
+}
+
+#related  {
+    font-family: Lora;
+    background-color: #2A2F33;
+    color: white;
+    text-decoration: none;
+}
+
+#news + footer {
+    background-color: #2A2F33;
+    color: white;
+}
+
+#news {
+    font-family: Poppins;
+}
+
+h1 a {
+    text-decoration: none;
+}
+
+h2 a {
+    text-decoration: none;
+}
+
+p + footer {
+    background-color: #F4655F;
+}
+
+#signup a {
+    text-decoration: none;
+}
