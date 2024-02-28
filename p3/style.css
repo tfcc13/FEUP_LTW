@@ -4,6 +4,11 @@ body > header {
     background-color: #046DD5;
 }
 
+
+body > header a {
+    color: white;
+}
+
 #menu a {
     text-decoration: none;
     border-top: #8ABA56;
