@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700|Poppins:400,700');
 
-body {
-    background-color: green;
+html {
+    background-color: white;
     padding: 1em;
     margin: 1em;
 }
 
 body > header {
     background-color: #046DD5;
-    margin: 1em;
-    padding: 0.5em;
+    padding: 1em;
 }
 
 
@@ -24,7 +23,8 @@ body > header h2 {
 }
 
 #menu {
-    padding: 1em;
+    padding: 0em;
+    margin: 0;
 }
 
 #menu ul {
@@ -88,7 +88,6 @@ body > header h2 {
     background-color: #2A2F33;
     color: white;
     text-decoration: none;
-    margin: 1em;
     padding: 1em;
 }
 
@@ -106,27 +105,22 @@ body > header h2 {
     color: white;
     font-family: Lora;
     padding: 1em;
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-top: 1em;
 }
 
 #news {
     font-family: Lora;
-    width: auto;
-    height: auto;
-    margin: 1em;
-    padding: 1em;
 }
 
 #news p {
     font-size: small;
+    padding: 0 1em 0 1em;
 }
 
 #news img {
     display: block;
     margin: 0 auto;
     width: 100%;
-    height: auto;
     max-width: 100%;
 }
 
@@ -153,14 +147,19 @@ h2 a {
 p + footer {
     background-color: #F4655F;
     padding: 1em;
+    color: white;
+}
+
+
+p + footer a {
+    color: white;
 }
 
 #signup a {
     text-decoration: none;
 }
 
-
-#menu ul li a:hover {
+#menu ul li a:hover, body a:hover {
     background-color: #2A2F33;
     color: white;
 }
