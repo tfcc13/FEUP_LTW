@@ -158,3 +158,9 @@ p + footer {
 #signup a {
     text-decoration: none;
 }
+
+
+#menu ul li a:hover {
+    background-color: #2A2F33;
+    color: white;
+}
