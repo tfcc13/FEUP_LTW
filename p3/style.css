@@ -1,41 +1,145 @@
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700|Poppins:400,700');
 
+body {
+    background-color: green;
+    padding: 1em;
+    margin: 1em;
+}
+
 body > header {
     background-color: #046DD5;
+    margin: 1em;
+    padding: 0.5em;
 }
 
 
 body > header a {
     color: white;
+    font-family: Lora;
 }
 
-#menu a {
+
+body > header h2 {
+    font-size: larger;
+}
+
+#menu {
+    padding: 1em;
+}
+
+#menu ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#menu ul li  {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#menu li a {
     text-decoration: none;
-    border-top: #8ABA56;
-    border-top-width: 2px;
+}
+
+
+
+#menu li:nth-child(1){
+    border-top: #d6271b;
+    border-top-width: 4px;
+    border-top-style: solid;
+}
+
+#menu li:nth-child(2){
+    border-top: green;
+    border-top-width: 4px;
+    border-top-style: solid;
+}
+
+#menu li:nth-child(3){
+    border-top: blue;
+    border-top-width: 4px;
+    border-top-style: solid;
+}
+
+#menu li:nth-child(4){
+    border-top: orange;
+    border-top-width: 4px;
+    border-top-style: solid;
+}
+
+#menu li:nth-child(5){
+    border-top: lightblue;
+    border-top-width: 4px;
+    border-top-style: solid;
+}
+
+#menu li:nth-child(6){
+    border-top: purple;
+    border-top-width: 4px;
     border-top-style: solid;
 }
 
 
-body {
-    padding: 1em;
-    margin: 1em;
-}
 
 #related  {
-    font-family: Lora;
+    font-family: Poppins;
     background-color: #2A2F33;
     color: white;
     text-decoration: none;
+    margin: 1em;
+    padding: 1em;
 }
+
+#related p {
+    font-size: small;
+}
+
+#related h1 a {
+    color: white;
+}
+
 
 #news + footer {
     background-color: #2A2F33;
     color: white;
+    font-family: Lora;
+    padding: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 #news {
+    font-family: Lora;
+    width: auto;
+    height: auto;
+    margin: 1em;
+    padding: 1em;
+}
+
+#news p {
+    font-size: small;
+}
+
+#news img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+
+#news h1 a {
+    color:white;
     font-family: Poppins;
+}
+ 
+
+#news p::first-letter {
+    font-size: xx-large;
+    font-weight: bold;
 }
 
 h1 a {
@@ -48,6 +152,7 @@ h2 a {
 
 p + footer {
     background-color: #F4655F;
+    padding: 1em;
 }
 
 #signup a {
