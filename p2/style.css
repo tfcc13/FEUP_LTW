@@ -1,6 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Imperial+Script&family=Ruda:wght@400..900&display=swap');
 
+html {
+    font-family: 'Crimson Pro', serif;
+    font-size: 2rem;
+    color: #333333;
+}
 
+body > header, article.card {
+    width: 30em;
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+body > header {
+    text-align: center;
+    font-family: 'Imperial Script', serif;
+}
+
+body > header h1 {
+    font-size: 6em;
+    font-weight: 400;
+    margin: 0;
+}
+
+/*
 body header > h1 {
     font-family: Imperial Script;
     font-size: 6.2em;
@@ -8,16 +31,60 @@ body header > h1 {
     text-align: center;
 }
 
+*/
+
+/*
 body {
     box-sizing: border-box;
     margin: 0 auto;
     max-width: 700px;
-    background-color: #fff1dc ;
+ 
+
+}
+*/
+
+article.card {
+    background-color: #f7ede2;
+    padding: 1em;
+}
+
+article.card h2 {
+    font-family: Ruda;
+    font-weight: 400;
+    text-align: right;
+    border-bottom: 2px solid #333;
 
 }
 
+article.card header dl {
+    border: 2px dashed #f28482;
+    border-right: 10px solid #f28492;
+    border-radius: 20px 0 0 20px;
+    background-color: #f5cac3;
+    padding: 0 1em;
+}
 
-#card {
+article.card header dt {
+    text-transform: capitalize;
+    font-variant-caps: small-caps;
+}
+
+article.card header dd {
+    margin-left: 0 ;
+    margin-bottom: 0.5em;
+}
+
+
+article.card header dt {
+    margin-top: 0.5em;
+}
+
+p{
+    line-height: 1.4em;
+}
+
+/*
+.card {
     background-color: #ffc6c6;
     padding: 1em;
     border-top-left-radius: 12px;
@@ -26,36 +93,46 @@ body {
     border-right-style: solid;
     border-right-color: #ca8a8a;
 }
+*/
 
 
 
-
-body header > h2 {
-    font-family: Ruda;
-    text-align: right;
-
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    border-bottom-color: gray;
+section.description img {
+    width: 100%;
 }
 
-
-
-.description p {
+/*.description p {
     font-family: Crimson Pro ;
     line-height: 2em;
+    font-weight: bold;
+    font-size: large;
+}
+*/
+
+section.ingredients p {
+    font-weight: bold;
 }
 
+/*
 .ingredients {
     font-family: Crimson Pro;
     line-height: 2em;
 }
+*/
 
+/*
 .method {
     font-family: Crimson Pro;
     line-height: 2em;
 }
+*/
 
-.marked {
-    color: rgb(157, 184, 233);
+section.method li, section.ingredients li{
+    margin-bottom: 1em;
+}
+
+span.marked {
+    background-color: transparent;
+    color: #84a59d;
+    font-weight: bold;
 }
