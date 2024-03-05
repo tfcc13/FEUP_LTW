@@ -1,14 +1,28 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 
+
+header {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
 
 
 #menu {
     grid-column: 1;
+    grid-row: 2;
 }
+
+#news {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+}
+
 
 #menu ul {
     display: flex;
@@ -18,7 +32,13 @@ body {
 #menu ul li{
     flex-grow: 1;
 }
-
+*/
 .related {
     grid-column: 2;
+    align-self: stretch;
+}
+
+footer {
+    grid-row: 4;
+    grid-column: 1 / span 2;
 }
