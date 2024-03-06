@@ -13,6 +13,9 @@ header {
 }
 
 
+#signup {
+    float: right;
+}
 
 #menu {
     grid-column: 1;
