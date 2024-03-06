@@ -3,7 +3,6 @@ body {
     display: grid;
     grid-template-columns: 4fr 1fr;
     grid-template-rows: auto 1fr auto auto;
-    min-height: 100vh;
 }
 
 
