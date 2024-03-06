@@ -2,7 +2,7 @@
 body {
     display: grid;
     grid-template-columns: 4fr 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr auto auto;
     min-height: 100vh;
 }
 
@@ -13,30 +13,37 @@ header {
 }
 
 
+
 #menu {
     grid-column: 1;
     grid-row: 2;
 }
-
-#news {
-    grid-column: 1;
-    grid-row: 2 / span 2;
-}
-
 
 #menu ul {
     display: flex;
     justify-content:flex-start;
 }
 
+
 #menu ul li{
     flex-grow: 1;
 }
-*/
-.related {
-    grid-column: 2;
-    align-self: stretch;
+
+
+#news {
+    grid-column: 1;
+    grid-row: 3;
 }
+
+
+
+#related {
+    grid-column: 2;
+    grid-row: 2;
+    grid-row-end: span 3;
+}
+
+
 
 footer {
     grid-row: 4;

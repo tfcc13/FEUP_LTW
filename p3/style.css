@@ -2,8 +2,8 @@
 
 html {
     background-color: white;
-    padding: 1em;
-    margin: 1em;
+    /*padding: 1em;
+    margin: 1em;*/
 }
 
 body > header {
@@ -119,11 +119,26 @@ body > header h2 {
 
 #news img {
     display: block;
-    margin: 0 auto;
     width: 100%;
     max-width: 100%;
+    margin-top: 1em;
 }
 
+
+#news article {
+    position: relative;
+}
+
+#news header {
+    position: absolute;
+    top: 0%; 
+    left: 5%; 
+    transform: translate(-15%, 0%);
+    color: #fff; 
+    padding: 10px 20px; 
+    text-align: center;
+    max-width: 20%;
+}
 
 #news h1 a {
     color:white;
