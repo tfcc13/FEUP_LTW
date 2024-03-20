@@ -1,19 +1,21 @@
 <?php 
 
+    $id = $_GET['id'];
+
     $db = new PDO('sqlite:news.db');
     
     $stmt = $db->prepare('SELECT * FROM news JOIN users USING(username) WHERE id= ?');
     $stmt->execute(array($id));
     $article = $stmt->fetch();
     
-    $stmt = $db->prepare('SELECT *FROM news JOIN users 
+    $stmt = $db->prepare('SELECT *FROM comments JOIN users 
             USING(username) where news_id=?'); 
     $stmt->execute(array($id));
     $comments = $stmt->fetchAll();
 
-    $tags = explode(',',$article['tag']);
-    $date = date('F j', article['published']);
-    $paragraphs = explode('\n\n', article['fulltext']);
+    $tags = explode(',',$article['tags']);
+    $date = date('F j', $article['published']);
+    $paragraphs = explode('\n\n', $article['fulltext']);
 ?>
 
 <!DOCTYPE html>
@@ -30,11 +32,11 @@
   </head>
   <body>
     <header>
-      <h1><a href="index.html">Super Legit News</a></h1>
-      <h2><a href="index.html">Where fake news are born!</a></h2>
+      <h1><a href="/">Super Legit News</a></h1>
+      <h2><a href="/">Where fake news are born!</a></h2>
       <div id="signup">
-        <a href="register.html">Register</a>
-        <a href="login.html">Login</a>
+        <a href="register.php">Register</a>
+        <a href="login.php">Login</a>
       </div>
     </header>
     <nav id="menu">
@@ -43,12 +45,12 @@
       <label class="hamburger" for="hamburger"></label>
 
       <ul>
-        <li><a href="index.html">Local</a></li>
-        <li><a href="index.html">World</a></li>
-        <li><a href="index.html">Politics</a></li>
-        <li><a href="index.html">Sports</a></li>
-        <li><a href="index.html">Science</a></li>
-        <li><a href="index.html">Weather</a></li>
+        <li><a href="/">Local</a></li>
+        <li><a href="/">World</a></li>
+        <li><a href="/">Politics</a></li>
+        <li><a href="/">Sports</a></li>
+        <li><a href="/">Science</a></li>
+        <li><a href="/">Weather</a></li>
       </ul>
     </nav>
     <aside id="related">
@@ -66,16 +68,10 @@
       </article>
     </aside>
     <section id="news">
-        <?php 
-            foreach($articles as $article) {
-                $date = date('F j',$article['published']);
-                $tags=explode(',',$article['tags']);
-            }
-        ?>
       <article>
         <header>
             <!-- =$article['id'] imprime o article id-->
-          <h1><a href="article.php?id=<?=$article['id']?>"><?=article['title']?></a></h1>
+          <h1><a href="article.php?id=<?=$article['id']?>"><?=$article['title']?></a></h1>
         </header>
         <img src="https://picsum.photos/600/300?business" alt="">
             
@@ -86,10 +82,10 @@
 
             <?php } ?>
         <section id="comments">
-                <h1><?=count($comments) ?>  Comments</h1>
+                <h1><?=count($comments)?> Comments</h1>
                 <?php foreach($comments as $comment)  { ?>
                     <article class ="comment">
-                        <span class = "user"><?=comment['name']?></span>
+                        <span class = "user"><?=$comment['name']?></span>
                         <span class = "date"> <?=date('F j H:m',$comment['published'])?> </span>
                         <p><?=$comment['text']?></p>
                     </article>
@@ -115,10 +111,10 @@
                         <a href="index.php">#<?=$tag?></a>
                     <?php } ?>
                 </span>
-                <span class = "date">
-                        <?$date?>
+                <span class ="date">
+                        <?=$date?>
                 </span>
-                <a class="comments" href="article.php?id=<?=$article['id']?>#comments"><?=article['comments']?></a>
+                <a class="comments" href="article.php?id=<?=$article['id']?>#comments"><?=$article['comments']?></a>
             </footer>
       </article>
     </section>
