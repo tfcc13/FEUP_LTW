@@ -1,7 +1,7 @@
 <?php
 
     function getAllNews($db) {
-        $stmt = prepare('SELECT news.*, users.*, COUNT(comments.id) AS comments
+        $stmt = $db->prepare('SELECT news.*, users.*, COUNT(comments.id) AS comments
     FROM news JOIN
         users USING (username) LEFT JOIN
         comments ON comments.news_id = news.id

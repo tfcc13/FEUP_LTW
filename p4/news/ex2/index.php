@@ -8,7 +8,7 @@
     
 
     output_header();
-    output_article_list($articles);
-    output_footer();
+    //output_article_list($articles);
+    //output_footer();
 
 ?>
