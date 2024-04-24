@@ -7,11 +7,11 @@
         <title>Super Legit News</title>    
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style.css" rel="stylesheet">
-        <link href="layout.css" rel="stylesheet">
-        <link href="responsive.css" rel="stylesheet">
-        <link href="comments.css" rel="stylesheet">
-        <link href="forms.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/layout.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
+        <link href="css/comments.css" rel="stylesheet">
+        <link href="css/register.css" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -51,5 +51,13 @@
         </article>
         </aside>
 
+    <?php } ?>
+
+    <?php function output_footer() { ?>
+        <footer>
+            <p>&copy; Fake News, 2024</p>
+        </footer>
+        </body>
+    </html>
     <?php } ?>
 

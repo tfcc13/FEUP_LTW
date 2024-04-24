@@ -14,5 +14,10 @@
 
     }
 
+    function getNewsItem($db, $id) {
+        $stmt = $db->prepare('SELECT * FROM news JOIN users USING (username) WHERE id = ?');
+        $stmt->execute(array($id));
+    }
+
 
 ?>

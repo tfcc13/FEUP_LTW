@@ -86,7 +86,7 @@
             <?php } ?>
             
         </span>
-          <span class="date"><?=$date?></span>
+          <span class="date"><?=$sdate?></span>
           <a class="comments" href="article.php?id=<?=$article['id']?>#comments"><?=$article['comments']?></a>
         <?=$article['comments']?></a>
         </footer>
