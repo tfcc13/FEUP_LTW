@@ -35,10 +35,36 @@ function atachBuyEvents() {
     */
     buttons.forEach(button => {
         button.addEventListener('click', function() {
-            console.log('BUY');
- 
+            
+            //Parte do EX3
+            /*console.log('BUY');
+            
             //imprime o event Target, ou seja o button que foi clickado
             console.log(this);
+            */
+            
+            // a class parent do button é o article data-id (html)
+            const article = this.parentElement;
+
+
+            console.log(article);
+            
+            //Adiciona ou remove a class 'sale' à class parente do botão clickado 
+            article.classList.toggle('sale');
+
+            const product_id = article.getAttribute('data-id');
+            console.log('Product ID:', product_id);
+
+            const product_name = article.querySelector('h2').textContent;
+            console.log('Product:', product_name);
+
+            const product_price = article.querySelector('.price').textContent;
+            console.log('Current Price:', product_price);
+
+            const  product_quant = article.querySelector('.quantity').value;        
+            console.log('Chosen quantity:', product_quant);
+
+
         })
     })
 
